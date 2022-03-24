@@ -1,0 +1,43 @@
+#Program for game: Stone, paper, scissor
+
+print("Rules of the game: Rock wins against scissors; paper wins against rock; and scissors wins against paper")
+
+import random #Import random module to ensure than occurence of random number in each turn of the game
+choices_input= ["Rock", "Paper", "Scissor"]
+comp = random.choice(choices_input)
+player = input("Please choose one: Rock, Paper, Scissor\n").capitalize()
+def game_win(comp, player):
+    if comp == "Rock": # comp chooses randomly
+        if player == "Rock": 
+            return None
+        elif player == "Paper": 
+            return True
+        elif player == "Scissor":
+            return False
+
+    elif comp == "Paper":
+        if player == "Paper":
+            return None
+        elif player == "Rock":
+            return False
+        elif player == "Scissor":
+            return True
+
+    elif comp == "Scissor":
+        if player == "Scissor":
+            return None
+        elif player == "Rock":
+            return True
+        elif player == "Paper":
+            return False
+         
+    
+play = game_win(comp, player)
+print(f"Computer chose {comp} and you chose {player}")
+if play == None:
+    print("It's a tie!")
+elif play == True:
+    print("You win!")
+else:
+    print("You lose!")
+
