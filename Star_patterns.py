@@ -1,5 +1,6 @@
 #Program to write star patterns
 #In each star pattern, we use i and j variables to iterate between rows and columns
+#I have broken down the complex patterns into simpler triangle ones and combined the for loops as desried
 
 #1 SQUARE STAR PATTERN
 n = int(input("Enter the number: "))
